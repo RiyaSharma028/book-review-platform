@@ -2,8 +2,7 @@ import {Book} from "../models/books.model.js"
 
 const getAllBooks = async (req, res) => {
   try {
-    // Extract page and limit from query, with defaults
-    const page = parseInt(req.query.page) || 1;
+    
     const limit = parseInt(req.query.limit) || 4;
     const skip = (page - 1) * limit;
 
@@ -43,11 +42,11 @@ const getBookById = async (req, res) => {
 
 export {getBookById};
 
-// POST /books
+
 const addBook = async (req, res) => {
   try {
-    // 🛡️ Simulated admin check
-    const isAdmin = true; // set to false to test rejection
+  
+    const isAdmin = true; 
     if (!isAdmin) {
       return res.status(403).json({ message: "Only admins can add books." });
     }
