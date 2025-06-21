@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Navbar from "../components/Home/Navbar.jsx";
-import Footer from "../components/Home/Navbar.jsx";
 import BookCard from "../components/Home/BookCard.jsx";
 
 function BookList() {
@@ -44,7 +43,6 @@ function BookList() {
       <div className="p-6 flex-1">
         <h2 className="text-2xl font-bold mb-4"> All Books</h2>
 
-        {/* 🔍 Search + Filter Section */}
         <div className="mb-6 flex flex-col md:flex-row gap-4">
           <input
             type="text"
@@ -68,7 +66,6 @@ function BookList() {
           </select>
         </div>
 
-        {/* 📦 Book Cards Grid */}
         {filteredBooks.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {filteredBooks.map((book) => (
@@ -79,7 +76,6 @@ function BookList() {
           <p className="text-gray-500">No books found.</p>
         )}
 
-        {/* 🔁 Pagination */}
         <div className="mt-6 flex justify-center gap-4">
           <button
             onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
