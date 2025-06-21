@@ -52,5 +52,5 @@ cd client
 npm install
 npm run dev
 
-![Homepage Screenshot](https://github.com/RiyaSharma028/book-review-platform/blob/master/client/public/Homepage.png)
+![Homepage Screenshot](client/public/Homepage.png)
 
