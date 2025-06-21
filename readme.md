@@ -52,5 +52,3 @@ cd client
 npm install
 npm run dev
 
-![Homepage Screenshot](client/public/Homepage.png)
-
